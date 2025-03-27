@@ -39,13 +39,26 @@
 }
 body{
     background-color: white;
-    margin-top: 60px;
+    padding-top: 60px;
 }
 .titiolo-container{
     flex-wrap: nowrap;
     display: flex;
-    justify-content: center;
+    margin: 0;
+    height: 3000px;
+    padding-bottom: 40px;
+  background-color: aqua;
 }
 .titolo{
     font-family:"Fascinate Inline",sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+   padding-top: 40px;
+}
+.chiSono-container{
+    width: 200px;
+    height: 400px;
+    border-radius: 8px ;
 }
