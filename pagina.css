@@ -35,19 +35,30 @@
 }
 .navbar a:hover{
     background-color:white;
-    border-radius: 5px;
+    
 }
 body{
     background-color: white;
     padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    
+
 }
-.titiolo-container{
+.titolo-container{
     flex-wrap: nowrap;
     display: flex;
     margin: 0;
-    height: 3000px;
+    height: 300px;
     padding-bottom: 40px;
-  background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    animation: animazionerossoblu 5s linear 2s infinite alternate;
+   
+    left: 0;
+    right: 0;
 }
 .titolo{
     font-family:"Fascinate Inline",sans-serif;
@@ -56,9 +67,78 @@ body{
    align-items: center;
    gap: 40px;
    padding-top: 40px;
+   animation: moveTitle 1.5s infinite ease-in-out;
+}
+@keyframes moveTitle{
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px); /* Sposta il testo verso l'alto */
+    }
+    50% {
+        transform: translateY(10px);  /* Sposta il testo verso il basso */
+    }
+    75% {
+        transform: translateY(-5px); /* Effetto intermedio tra su e giù */
+    }
+    100% {
+        transform: translateY(0);    /* Ripristina la posizione originale */
+    }
 }
 .chiSono-container{
     width: 200px;
     height: 400px;
-    border-radius: 8px ;
+    grid-column: auto;
+    box-shadow: 7px 10px 26px -5px red;
+    padding: 30px;
+    border-radius: 20px ;
+margin-top: 40px;
+}
+
+@keyframes animazionerossoblu
+{
+0%   {background: #8a2be2; }
+25%  {background: #ff7f50; }
+50%  {background: #8fbc8f; }
+75%  {background: 	#2f4f4f; }
+100% {background: black; }
+}
+.carosello-container{
+    width: 200px;
+    max-width: 200px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 7px 10px 26px -5px red;
+    border-radius: 20px ;
+}
+.carosello{
+display: flex;
+transition: transform 2s ease;
+animation: moveSlides 10s infinite;
+}
+.slide{
+    min-width: 100%;
+    transition: opacity 1s ease;
+}
+.slide img{
+    width: 100%;
+    height: auto;
+}
+@keyframes moveSlides{
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
 }
