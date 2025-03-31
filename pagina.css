@@ -89,7 +89,6 @@ body{
 .chiSono-container{
     width: 200px;
     height: 400px;
-    grid-column: auto;
     box-shadow: 7px 10px 26px -5px red;
     padding: 30px;
     border-radius: 20px ;
@@ -105,12 +104,15 @@ margin-top: 40px;
 100% {background: black; }
 }
 .carosello-container{
-    width: 200px;
-    max-width: 200px;
+    width: 400px;
+    max-width: 400px;
+    height: 200px;
     margin: auto;
     overflow: hidden;
     box-shadow: 7px 10px 26px -5px red;
     border-radius: 20px ;
+    flex-direction: column;
+   
 }
 .carosello{
 display: flex;
