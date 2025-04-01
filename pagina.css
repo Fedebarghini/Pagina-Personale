@@ -10,8 +10,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 140px;
+    padding: 0 80px;
     flex-wrap: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    
 }
 .navbar ul{
     list-style-type: none;
@@ -32,9 +35,11 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 20px;
 }
 .navbar a:hover{
     background-color:white;
+    
     
 }
 body{
@@ -88,11 +93,14 @@ body{
 }
 .chiSono-container{
     width: 200px;
-    height: 400px;
+    height: 510px;
     box-shadow: 7px 10px 26px -5px red;
     padding: 30px;
     border-radius: 20px ;
 margin-top: 40px;
+}
+.chiSono-container p{
+    line-height: 1.8;
 }
 
 @keyframes animazionerossoblu
@@ -106,18 +114,18 @@ margin-top: 40px;
 .carosello-container{
     width: 400px;
     max-width: 400px;
-    height: 200px;
+    height: 280px;
     margin: auto;
     overflow: hidden;
     box-shadow: 7px 10px 26px -5px red;
     border-radius: 20px ;
-    flex-direction: column;
-   
+    transform: translateY(-420px);
 }
 .carosello{
 display: flex;
 transition: transform 2s ease;
 animation: moveSlides 10s infinite;
+
 }
 .slide{
     min-width: 100%;
@@ -125,22 +133,62 @@ animation: moveSlides 10s infinite;
 }
 .slide img{
     width: 100%;
-    height: auto;
+    height: 280px;
 }
-@keyframes moveSlides{
+@keyframes moveSlides {
     0% {
         transform: translateX(0);
     }
-    25% {
+    16.66% {  /* 100% / 6 per ogni immagine */
         transform: translateX(-100%);
     }
-    50% {
+    33.33% {
         transform: translateX(-200%);
     }
-    75% {
+    50% {
         transform: translateX(-300%);
     }
-    100% {
+    66.66% {
         transform: translateX(-400%);
     }
+    83.33% {
+        transform: translateX(-500%);
+    }
+    100% {
+        transform: translateX(-600%); /* Fino a 6 immagini */
+    }
 }
+.esperienze{
+    width: 280px;
+    height: 550px;
+    box-shadow: 7px 10px 26px -5px red;
+    padding: 30px;
+    border-radius: 20px ;
+    text-align: center;
+    position: relative;
+    left: 1180px; 
+    bottom: 850px;
+}
+.esperienze li{
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid red;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.lingue{
+    width: 200px;
+    height: 200px;
+    box-shadow: 7px 10px 26px -5px red;
+    padding: 30px;
+    border-radius: 20px ;
+    margin-left: 50px;
+    text-align: center;
+}
+.lingue li{
+    border: solid red;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
